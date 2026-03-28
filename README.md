@@ -31,19 +31,20 @@ Furthermore, the `merge_models.py` script performs the Merge & Unload of the LoR
 **⚠️ Important:** Ensure you have exactly **Python 3.11.x** installed. Newer versions (like 3.12+) may cause severe CUDA/GPU compatibility issues with the underlying deep learning libraries (`torch`, `bitsandbytes`, etc.).
 
 Install the dependencies by running:
-\`\`\`bash
+```bash
 pip install .
-\`\`\`
+```
 
 ### 2. Training
 The script is pre-configured to download the Resident Evil dataset directly from Hugging Face. Simply run:
-\`\`\`bash
+```bash
 python fine_tuning.py
-\`\`\`
+```
 
 ### 3. Merging the Model
 Once training is complete, merge the LoRA adapter with the base model:
-\`\`\`bash
+```bash
 python merge_models.py
-\`\`\`
+```
+
 The standalone, inference-ready model will be saved in the `salamandra-merged/` directory.
